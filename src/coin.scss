@@ -1,28 +1,30 @@
 .coin-container {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  // grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
   margin: 1px;
+  width: 100%;
+  
 }
 
 .coin-row {
   display: flex;
-  flex-direction: row;
-  justify-content: start;
+  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  height: 80px;
-  width: 900px;
+  height: 100%;
+  margin: 10px;
+  width: 100%;
 }
 
 .coin {
   display: flex;
   align-items: center;
-  padding-right: 24px;
-  min-width: 300px;
+  padding: 20px 0px;
 }
 
 .coin h1 {
   font-size: 16px;
-  width: 150px;
 }
 
 .coin img {
@@ -33,21 +35,65 @@
 
 .coin-symbol {
   text-transform: uppercase;
+  padding: 0px 10px;
 }
 
 .coin-data {
-  display: flex;
-  text-align: center;
-  justify-content: space-between;
+  display: grid;
+  .coin-data-1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0px;
+    .coin-data-1-left {
+      padding-right: 10px;
+      p {
+        padding: 10px 0px;
+      }
+    }
+    .coin-data-1-right {
+      text-align: right;
+      p {
+        padding: 10px 0px;
+      }
+    }
+  }
+  .coin-data-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+    width: 100%;
+    .coin-data-2-left {
+      padding-right: 10px;
+      p {
+        padding: 10px 0px;
+      }
+      .coin-data-2-left-arrows {
+        span:nth-child(1) {
+            color: green !important;
+        }
+        span:nth-child(2) {
+          color: red;
+        }
+        
+      }
+    }
+    .coin-data-2-right {
+      text-align: right;
+      p {
+        padding: 10px 0px;
+      }
+    }
+  }
+}
+
+
+
+.coin-price {
   width: 100%;
 }
 
-.coin-price {
-  width: 110px;
-}
-
 .coin-volume {
-  width: 230px;
   
 }
 
@@ -79,3 +125,17 @@
     }
   }
 }
+
+// @media screen and (max-width: 300px) {
+//   .coin-container {
+//     display: flex;
+//     justify-content: center;
+//     align-content: center;
+//     position: relative;
+//     width: 100%;
+
+//     .coin-row {
+//       display: grid;
+//     }
+//   }
+// }
