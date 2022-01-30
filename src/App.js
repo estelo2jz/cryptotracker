@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App-master-container">
       <div className='coin-search'>
-        <h1 className='coin-text'>Search a currency</h1>
+        <h1 className='coin-text'>Search Currency</h1>
         <form>
           <input
             className='coin-input'
